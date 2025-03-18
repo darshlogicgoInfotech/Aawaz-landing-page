@@ -5,7 +5,8 @@ export default defineConfig({
   plugins: [react()],
   base: '/', // ✅ Ensure base path is correct
   server: {
-    host: "0.0.0.0", // 👈 Ye line add karo
-    port: process.env.PORT || 5173, // 👈 Render ka assigned port use karo
+    host: true, // ✅ Ensure local dev works
+    strictPort: true,
+    allowedHosts: ["aawaz-landing-page.onrender.com"], // ✅ Live host allow karo
   },
 });
